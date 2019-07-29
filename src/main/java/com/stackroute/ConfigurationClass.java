@@ -22,11 +22,11 @@ public class ConfigurationClass {
 //    }
 
 
-    @Bean
-    public Actor actorHritik() {
-        Actor actor = new Actor("Hritik", "Male", 30);
-        return actor;
-    }
+//    @Bean
+//    public Actor actorHritik() {
+//        Actor actor = new Actor("Hritik", "Male", 30);
+//        return actor;
+//    }
 
 
     @Bean
@@ -35,10 +35,11 @@ public class ConfigurationClass {
         return actor;
 
     }
-        @Bean({"movieA", "movieB"})
-        @Scope("prototype")
-        public Movie movie () {
-            Movie movie = new Movie(actorSalman());
-            return movie;
-        }
+
+    @Bean
+    public Movie movie() {
+        Movie movie = new Movie();
+        return movie;
+
     }
+}
