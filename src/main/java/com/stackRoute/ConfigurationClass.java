@@ -10,6 +10,11 @@ import org.springframework.context.annotation.*;
 @ComponentScan(basePackages = "com.stackRoute.domain")
 @PropertySource("Actor.properties")
 public class ConfigurationClass {
+    @Bean(name="postProcessing")
+    public BeanPostProcessorDemo beanPostProcessorDemo() {
+        BeanPostProcessorDemo beanPostProcessorDemo=new BeanPostProcessorDemo();
+        return beanPostProcessorDemo;
+    }
 
     @Bean
     public Movie movie(){
@@ -20,6 +25,7 @@ public class ConfigurationClass {
     public BeanLifeCycleDemo beanLifeCycleDemo(){
         BeanLifeCycleDemo beanLifeCycleDemo=new BeanLifeCycleDemo();
         return beanLifeCycleDemo;
+
     }
 
 }
