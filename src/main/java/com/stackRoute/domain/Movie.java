@@ -1,5 +1,5 @@
 
-package com.stackroute.domain;
+package com.stackRoute.domain;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
@@ -10,10 +10,10 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNameAware {
 
-    @Autowired
+
     private Actor actorSalmankhan;
 
     public Movie(){
@@ -44,5 +44,14 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
         return "Movie{" +
                 "actor=" + actorSalmankhan +
                 '}';
+    }
+
+    public Actor getActorSalmankhan() {
+        return actorSalmankhan;
+    }
+
+    @Autowired
+    public void setActorSalmankhan(Actor actorSalmankhan) {
+        this.actorSalmankhan = actorSalmankhan;
     }
 }
